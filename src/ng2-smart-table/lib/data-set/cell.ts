@@ -8,7 +8,7 @@ export class Cell {
   protected static PREPARE = (value: any) => value;
 
   constructor(protected value: any, protected row: Row, protected column: any, protected dataSet: DataSet) {
-    this.newValue = value;
+    this.newValue = JSON.parse(JSON.stringify(value));
   }
 
   getColumn(): Column {
